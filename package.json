@@ -68,7 +68,7 @@
     "test:argos": "node ./scripts/pushArgos.js",
     "typescript": "lerna run --no-bail --parallel typescript",
     "typescript:ci": "lerna run --concurrency 7 --no-bail --no-sort typescript",
-    "validate-declarations": "babel-node --extensions \".ts\" scripts/validateTypescriptDeclarations.ts",
+    "validate-declarations": "cross-env babel-node --extensions \".ts\" ./scripts/validateTypescriptDeclarations.ts",
     "generate-codeowners": "node scripts/generateCodeowners.mjs"
   },
   "devDependencies": {

@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import chalk from 'chalk';
 import fse from 'fs-extra';
-import glob from 'globby';
+import { globby as glob } from 'globby';
 import path from 'path';
 
 const passMessage = (message) => `✓ ${chalk.gray(message)}`;

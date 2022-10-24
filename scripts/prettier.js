@@ -4,7 +4,7 @@
 
 // supported modes = check, check-changed, write, write-changed
 
-import glob from 'globby';
+import { globbySync } from 'globby';
 import prettier from 'prettier';
 import fs from 'fs';
 import path from 'path';
@@ -47,25 +47,23 @@ function runPrettier(options) {
       return line;
     });
 
-  const files = glob
-    .sync('**/*.{js,jsx,md,tsx,ts,cjs,mjs,json,html,css,prisma,yml}', {
-      cwd: workspaceRoot,
-      gitignore: true,
-      ignore: [
-        // these are auto-generated
-        'docs/pages/api-docs/**/*.md',
-        ...ignoredFiles,
-      ],
-      dot: true,
-    })
-    .filter(
-      (f) =>
-        (!changedFiles || changedFiles.has(f)) &&
-        // These come from crowdin.
-        // If we would commit changes crowdin would immediately try to revert.
-        // If we want to format these files we'd need to do it in crowdin
-        !isTranslatedDocument(f),
-    );
+  const files = globbySync('**/*.{js,jsx,md,tsx,ts,cjs,mjs,json,html,css,prisma,yml}', {
+    cwd: workspaceRoot,
+    gitignore: true,
+    ignore: [
+      // these are auto-generated
+      'docs/pages/api-docs/**/*.md',
+      ...ignoredFiles,
+    ],
+    dot: true,
+  }).filter(
+    (f) =>
+      (!changedFiles || changedFiles.has(f)) &&
+      // These come from crowdin.
+      // If we would commit changes crowdin would immediately try to revert.
+      // If we want to format these files we'd need to do it in crowdin
+      !isTranslatedDocument(f),
+  );
 
   if (!files.length) {
     return;

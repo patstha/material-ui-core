@@ -4,13 +4,13 @@
 
 // supported modes = check, check-changed, write, write-changed
 
-const glob = require('globby');
-const prettier = require('prettier');
-const fs = require('fs');
-const path = require('path');
-const yargs = require('yargs');
-const { LANGUAGES } = require('docs/src/modules/constants');
-const listChangedFiles = require('./listChangedFiles');
+import glob from 'globby';
+import prettier from 'prettier';
+import fs from 'fs';
+import path from 'path';
+import yargs from 'yargs';
+import { LANGUAGES } from 'docs/src/modules/constants';
+import listChangedFiles from './listChangedFiles';
 
 // FIXME: Incorrect assumption
 const workspaceRoot = process.cwd();

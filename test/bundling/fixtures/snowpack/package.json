@@ -16,7 +16,7 @@
     "@mui/styled-engine": "5.10.5",
     "@mui/styles": "5.10.3",
     "@mui/system": "5.10.5",
-    "@mui/utils": "5.10.3",
+    "@mui/utils": "5.15.20",
     "snowpack": "3.8.8",
     "react": "18.2.0",
     "react-dom": "18.2.0",

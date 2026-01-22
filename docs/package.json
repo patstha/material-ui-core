@@ -87,7 +87,7 @@
     "jss": "^10.9.2",
     "jss-plugin-template": "^10.9.2",
     "jss-rtl": "^0.3.0",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "lz-string": "^1.4.4",
     "markdown-to-jsx": "^7.1.7",
     "material-ui-popup-state": "^2.0.1",
@@ -121,7 +121,7 @@
     "stylis-plugin-rtl": "^2.1.1",
     "stylis-plugin-rtl-sc": "npm:stylis-plugin-rtl@^1.1.0",
     "webfontloader": "^1.6.28",
-    "webpack-bundle-analyzer": "^4.7.0"
+    "webpack-bundle-analyzer": "^5.2.0"
   },
   "devDependencies": {
     "@babel/plugin-transform-react-constant-elements": "^7.20.2",

@@ -9,7 +9,7 @@
     "./prism": "./prism.js"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "marked": "^4.1.1",
     "prismjs": "^1.29.0"
   }
